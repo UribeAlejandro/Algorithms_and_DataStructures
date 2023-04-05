@@ -2,7 +2,6 @@ package data_structures.stacks;
 
 import data_structures.utils.ListNode;
 import java.util.EmptyStackException;
-import java.util.List;
 
 public class StackFromLinkedList {
   private int size;

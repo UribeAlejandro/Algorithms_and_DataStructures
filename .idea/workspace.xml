@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b8d9562-e0f1-4415-bc19-31733b8dd2aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/data_structures/stacks/StackFromArrayResizable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data_structures/stacks/StackFromArrayResizableTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data_structures/stacks/StackFromArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_structures/stacks/StackFromArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/data_structures/stacks/StackFromArrayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data_structures/stacks/StackFromArrayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_structures/stacks/StackFromLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_structures/stacks/StackFromLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -63,7 +64,22 @@
       <recent name="data_structures.stacks" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.StackFromArrayResizableTest">
+    <configuration name="StackFromArrayResizableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data_structures.stacks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="data_structures.stacks" />
+      <option name="MAIN_CLASS_NAME" value="data_structures.stacks.StackFromArrayResizableTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StackFromArrayTest.push" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Algorithms" />
       <extension name="coverage">
@@ -95,6 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StackFromArrayResizableTest" />
         <item itemvalue="JUnit.StackFromArrayTest.push" />
       </list>
     </recent_temporary>
