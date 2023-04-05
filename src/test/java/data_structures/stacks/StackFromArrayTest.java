@@ -65,5 +65,7 @@ class StackFromArrayTest {
     stackFromArray.push(1);
     stackFromArray.push(2);
     assertArrayEquals(new int[]{1,2}, stackFromArray.getStack());
+    stackFromArray.pop();
+    assertArrayEquals(new int[]{1}, stackFromArray.getStack());
   }
 }

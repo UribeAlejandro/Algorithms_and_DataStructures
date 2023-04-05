@@ -49,6 +49,8 @@ public class StackFromArray {
   }
 
   public int[] getStack() {
-    return stack;
+    int[] tempStack = new int[size()];
+    System.arraycopy(stack, 0, tempStack, 0, tempStack.length);
+    return tempStack;
   }
 }
