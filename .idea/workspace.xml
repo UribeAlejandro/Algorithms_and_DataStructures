@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b8d9562-e0f1-4415-bc19-31733b8dd2aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/data_structures/stacks/StackFromArrayResizable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data_structures/stacks/StackFromArrayResizableTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data_structures/stacks/StackFromLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_structures/stacks/StackFromLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +22,9 @@
         <option value="JUnit5 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,7 +53,8 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/mnt/Documents/Personal/Learning/Algorithms/Stanford_Algorithms&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -61,10 +62,41 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="data_structures.queues" />
       <recent name="data_structures.stacks" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StackFromArrayResizableTest">
+  <component name="RunManager" selected="JUnit.QueueFromArrayTest">
+    <configuration name="QueueFromArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data_structures.queues.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="data_structures.queues" />
+      <option name="MAIN_CLASS_NAME" value="data_structures.queues.QueueFromArrayTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QueueFromLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data_structures.queues.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="data_structures.queues" />
+      <option name="MAIN_CLASS_NAME" value="data_structures.queues.QueueFromLinkedListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StackFromArrayResizableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Algorithms" />
       <extension name="coverage">
@@ -111,6 +143,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.QueueFromArrayTest" />
+        <item itemvalue="JUnit.QueueFromLinkedListTest" />
         <item itemvalue="JUnit.StackFromArrayResizableTest" />
         <item itemvalue="JUnit.StackFromArrayTest.push" />
       </list>
