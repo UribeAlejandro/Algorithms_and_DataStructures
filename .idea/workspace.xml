@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b8d9562-e0f1-4415-bc19-31733b8dd2aa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +63,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="data_structures.queues" />
       <recent name="data_structures.stacks" />
+      <recent name="data_structures.queues" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.QueueFromArrayTest">
+  <component name="RunManager">
     <configuration name="QueueFromArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Algorithms" />
       <extension name="coverage">
