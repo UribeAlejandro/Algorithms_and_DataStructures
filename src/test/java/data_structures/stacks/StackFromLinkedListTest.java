@@ -1,6 +1,9 @@
 package data_structures.stacks;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.EmptyStackException;
 import org.junit.jupiter.api.BeforeEach;
@@ -32,7 +35,9 @@ class StackFromLinkedListTest {
     assertEquals(2, stack.pop());
     assertEquals(1, stack.pop());
 
-    assertThrows(EmptyStackException.class, ()-> {stack.pop();});
+    assertThrows(EmptyStackException.class, () -> {
+      stack.pop();
+    });
   }
 
   @Test
@@ -43,7 +48,9 @@ class StackFromLinkedListTest {
     stack.pop();
     assertEquals(1, stack.peek());
     stack.pop();
-    assertThrows(EmptyStackException.class, () -> {stack.peek();});
+    assertThrows(EmptyStackException.class, () -> {
+      stack.peek();
+    });
   }
 
   @Test

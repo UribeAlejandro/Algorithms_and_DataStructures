@@ -1,12 +1,16 @@
 package data_structures.stacks;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.EmptyStackException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class StackFromArrayResizableTest {
+
   private StackFromArrayResizable stack;
 
   @BeforeEach
@@ -37,12 +41,16 @@ class StackFromArrayResizableTest {
     stack.pop();
     stack.pop();
     stack.pop();
-    assertThrows(EmptyStackException.class,()->{stack.pop();});
+    assertThrows(EmptyStackException.class, () -> {
+      stack.pop();
+    });
   }
 
   @Test
   void pop() {
-    assertThrows(EmptyStackException.class, () -> {stack.pop();});
+    assertThrows(EmptyStackException.class, () -> {
+      stack.pop();
+    });
     stack.push(1);
     stack.push(2);
     assertEquals(2, stack.pop());
@@ -51,7 +59,9 @@ class StackFromArrayResizableTest {
 
   @Test
   void peek() {
-    assertThrows(EmptyStackException.class, () -> {stack.peek();});
+    assertThrows(EmptyStackException.class, () -> {
+      stack.peek();
+    });
 
     stack.push(1);
     assertEquals(1, stack.peek());

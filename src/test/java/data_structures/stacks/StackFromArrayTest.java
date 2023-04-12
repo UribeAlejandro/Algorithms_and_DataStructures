@@ -1,12 +1,17 @@
 package data_structures.stacks;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.EmptyStackException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class StackFromArrayTest {
+
   private StackFromArray stackFromArray;
 
   @BeforeEach
@@ -21,7 +26,8 @@ class StackFromArrayTest {
 
     stackFromArray.push(2);
     assertThrows(RuntimeException.class, () -> {
-      stackFromArray.push(2);});
+      stackFromArray.push(2);
+    });
   }
 
   @Test
@@ -31,13 +37,15 @@ class StackFromArrayTest {
     assertEquals(2, stackFromArray.pop());
     assertEquals(1, stackFromArray.pop());
     assertThrows(EmptyStackException.class, () -> {
-      stackFromArray.pop();});
+      stackFromArray.pop();
+    });
   }
 
   @Test
   void peek() {
-    assertThrows(EmptyStackException.class, ()-> {
-      stackFromArray.peek();});
+    assertThrows(EmptyStackException.class, () -> {
+      stackFromArray.peek();
+    });
   }
 
   @Test
@@ -64,7 +72,7 @@ class StackFromArrayTest {
   void getStack() {
     stackFromArray.push(1);
     stackFromArray.push(2);
-    assertArrayEquals(new int[]{1,2}, stackFromArray.getStack());
+    assertArrayEquals(new int[]{1, 2}, stackFromArray.getStack());
     stackFromArray.pop();
     assertArrayEquals(new int[]{1}, stackFromArray.getStack());
   }
