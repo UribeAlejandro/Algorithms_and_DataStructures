@@ -18,6 +18,12 @@
       <scope>test</scope>
       <version>5.9.2</version>
     </dependency>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+      <version>13.0</version>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
   <groupId>algorithms</groupId>
   <modelVersion>4.0.0</modelVersion>
