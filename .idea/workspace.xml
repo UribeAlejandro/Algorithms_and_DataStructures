@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b8d9562-e0f1-4415-bc19-31733b8dd2aa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_structures/queues/Deque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_structures/queues/Deque.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

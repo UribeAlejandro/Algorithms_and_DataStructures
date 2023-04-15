@@ -28,24 +28,32 @@ import java.util.NoSuchElementException;
 public class Deque<Item> implements Iterable<Item> {
 
   private final static int INIT_CAPACITY = 8;
-  private int size;
   private Item[] deque;
-  private int front;
-  private int back;
 
   public Deque() {
-    size = 0;
-    deque = Item<>[INIT_CAPACITY];
+    deque = (Item[]) new Object[INIT_CAPACITY];
 
   }
 
   public boolean isEmpty() {
+    return front == back;
   }
 
   public int size() {
+    return back - front;
   }
 
   public void addFirst(Item item) throws IllegalArgumentException {
+    if (item == null) {
+      throw new IllegalArgumentException();
+    }
+
+    if (isFull()) {
+      // TODO: resize here
+    } else {
+
+    }
+
   }
 
   public void addLast(Item item) throws IllegalArgumentException {
