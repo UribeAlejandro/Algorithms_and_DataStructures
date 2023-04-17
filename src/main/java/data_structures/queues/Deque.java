@@ -11,8 +11,8 @@ import java.util.NoSuchElementException;
  * <p>
  * Corner cases.
  * <p>
- * - Throw an IllegalArgumentException if the client calls either <em>addFirst()</em> or addLast()
- * with a null argument.
+ * - Throw an IllegalArgumentException if the client calls either <em>addFirst()</em> or
+ * <em>addLast()</em> with a null argument.
  * <p>
  * - Throw a java.util.NoSuchElementException if the client calls either removeFirst() or removeLast
  * when the deque is empty.
@@ -27,67 +27,91 @@ import java.util.NoSuchElementException;
  */
 public class Deque<Item> implements Iterable<Item> {
 
-  private final static int INIT_CAPACITY = 8;
-  private Item[] deque;
+  private int size;
+  private Node<Item> head;
+  private Node<Item> tail;
+
 
   public Deque() {
-    deque = (Item[]) new Object[INIT_CAPACITY];
+    head = null;
+    tail = null;
+    size = 0;
 
   }
 
   public boolean isEmpty() {
-    return front == back;
+    return size == 0;
   }
 
   public int size() {
-    return back - front;
+    return size;
   }
 
   public void addFirst(Item item) throws IllegalArgumentException {
     if (item == null) {
       throw new IllegalArgumentException();
-    }
-
-    if (isFull()) {
-      // TODO: resize here
     } else {
-
+      Node<Item> node = new Node<>();
+      node.prev = null;
+      node.item = item;
+      tail.prev = node;
+      head = node;
+      if (isEmpty()) {
+        node.next = null;
+        tail = node;
+      } else {
+        node.next = tail;
+      }
+      size++;
     }
 
   }
 
   public void addLast(Item item) throws IllegalArgumentException {
+    if (item == null) {
+      throw new IllegalArgumentException();
+    } else {
+      Node<Item> node = new Node<>();
+      node.item = item;
+      node.next = null;
+      tail = node;
+      if (isEmpty()) {
+        node.prev = null;
+        head = node;
+      } else {
+        node.prev = tail;
+      }
+      size++;
+    }
   }
 
   public Item removeFirst() throws NoSuchElementException {
+    if (isEmpty()) {
+      throw new NoSuchElementException();
+    } else {
+      Item item = head.item;
+      head = head.next;
+      head.prev = null;
+
+      return item;
+    }
   }
 
-  public Item removeLast() {
-  }
-
-  private boolean isFull() {
-
+  public Item removeLast() throws NoSuchElementException {
+    if (isEmpty()) {
+      throw new NoSuchElementException();
+    } else {
+    }
   }
 
   public Iterator<Item> iterator() {
-    return new Deque.ListIterator();
   }
 
-  private class ListIterator implements Iterator<Item> {
+  private static class Node<Item> {
 
-    private ListNodeGeneric<Item> current = stack;
-
-    public boolean hasNext() {
-      return current != null;
-    }
-
-    public Item next() throws NoSuchElementException {
-      throw new NoSuchElementException();
-    }
-
-    public void remove() throws UnsupportedOperationException {
-      throw new UnsupportedOperationException();
-    }
+    private Item item;
+    private Node<Item> next;
+    private Node<Item> prev;
   }
 
 }
