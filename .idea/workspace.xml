@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b8d9562-e0f1-4415-bc19-31733b8dd2aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data_structures/queues/Deque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_structures/queues/Deque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data_structures/queues/RandomizedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data_structures/queues/RandomizedQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -62,12 +64,43 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="data_structures.queues" />
       <recent name="data_structures.stacks.apps" />
       <recent name="data_structures.stacks" />
-      <recent name="data_structures.queues" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.QueueFromArrayTest">
+  <component name="RunManager" selected="JUnit.DequeTest">
+    <configuration name="DequeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data_structures.queues.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="data_structures.queues" />
+      <option name="MAIN_CLASS_NAME" value="data_structures.queues.DequeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DequeTest.isEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data_structures.queues.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="data_structures.queues" />
+      <option name="MAIN_CLASS_NAME" value="data_structures.queues.DequeTest" />
+      <option name="METHOD_NAME" value="isEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QueueFromArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Algorithms" />
       <extension name="coverage">
@@ -113,22 +146,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StackFromArrayTest.push" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="data_structures.stacks.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="data_structures.stacks" />
-      <option name="MAIN_CLASS_NAME" value="data_structures.stacks.StackFromArrayTest" />
-      <option name="METHOD_NAME" value="push" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Stanford_Algorithms" />
       <method v="2">
@@ -144,10 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DequeTest" />
+        <item itemvalue="JUnit.DequeTest.isEmpty" />
         <item itemvalue="JUnit.QueueFromArrayTest" />
         <item itemvalue="JUnit.QueueFromLinkedListTest" />
         <item itemvalue="JUnit.StackFromArrayResizableTest" />
-        <item itemvalue="JUnit.StackFromArrayTest.push" />
       </list>
     </recent_temporary>
   </component>

@@ -1,6 +1,5 @@
 package data_structures.queues;
 
-import data_structures.utils.ListNodeGeneric;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -14,8 +13,8 @@ import java.util.NoSuchElementException;
  * - Throw an IllegalArgumentException if the client calls either <em>addFirst()</em> or
  * <em>addLast()</em> with a null argument.
  * <p>
- * - Throw a java.util.NoSuchElementException if the client calls either removeFirst() or removeLast
- * when the deque is empty.
+ * - Throw a java.util.NoSuchElementException if the client calls either <em>removeFirst()</em> or
+ * <em>removeLast()</em> when the deque is empty.
  * <p>
  * - Throw a java.util.NoSuchElementException if the client calls the next() method in the iterator
  * when there are no more items to return.
@@ -36,7 +35,6 @@ public class Deque<Item> implements Iterable<Item> {
     head = null;
     tail = null;
     size = 0;
-
   }
 
   public boolean isEmpty() {
@@ -51,17 +49,22 @@ public class Deque<Item> implements Iterable<Item> {
     if (item == null) {
       throw new IllegalArgumentException();
     } else {
-      Node<Item> node = new Node<>();
-      node.prev = null;
-      node.item = item;
-      tail.prev = node;
-      head = node;
+      Node<Item> newHead = new Node<>();
+
       if (isEmpty()) {
-        node.next = null;
-        tail = node;
+        newHead.prev = null;
+        newHead.item = item;
+        newHead.next = null;
+        head = newHead;
+        tail = newHead;
       } else {
-        node.next = tail;
+        newHead.prev = null;
+        newHead.item = item;
+        newHead.next = head;
+        head.prev = newHead;
+        head = newHead;
       }
+
       size++;
     }
 
@@ -71,15 +74,19 @@ public class Deque<Item> implements Iterable<Item> {
     if (item == null) {
       throw new IllegalArgumentException();
     } else {
-      Node<Item> node = new Node<>();
-      node.item = item;
-      node.next = null;
-      tail = node;
+      Node<Item> newTail = new Node<>();
       if (isEmpty()) {
-        node.prev = null;
-        head = node;
+        newTail.item = item;
+        newTail.next = null;
+        newTail.prev = null;
+        head = newTail;
+        tail = newTail;
       } else {
-        node.prev = tail;
+        newTail.next = null;
+        newTail.item = item;
+        newTail.prev = tail;
+        tail.next = newTail;
+        tail = newTail;
       }
       size++;
     }
@@ -88,30 +95,75 @@ public class Deque<Item> implements Iterable<Item> {
   public Item removeFirst() throws NoSuchElementException {
     if (isEmpty()) {
       throw new NoSuchElementException();
+    }
+    Item item = head.item;
+    if (size == 1) {
+      head = null;
+      tail = null;
     } else {
-      Item item = head.item;
       head = head.next;
       head.prev = null;
-
-      return item;
     }
+    size--;
+    return item;
   }
 
   public Item removeLast() throws NoSuchElementException {
     if (isEmpty()) {
       throw new NoSuchElementException();
-    } else {
     }
+    Item item = tail.item;
+    if (size == 1) {
+      tail = null;
+      head = null;
+    } else {
+      tail = tail.prev;
+      tail.next = null;
+    }
+    size--;
+    return item;
   }
 
   public Iterator<Item> iterator() {
+    return new DequeIterator();
   }
+
 
   private static class Node<Item> {
 
     private Item item;
     private Node<Item> next;
     private Node<Item> prev;
+  }
+
+  private class DequeIterator implements Iterator<Item> {
+
+    private Node<Item> current;
+
+    public DequeIterator() {
+      current = head;
+    }
+
+    @Override
+    public boolean hasNext() {
+      return current != null;
+    }
+
+    @Override
+    public Item next() throws NoSuchElementException {
+      if (hasNext()) {
+        Item item = current.item;
+        current = current.next;
+        return item;
+      } else {
+        throw new NoSuchElementException();
+      }
+    }
+
+    @Override
+    public void remove() throws UnsupportedOperationException {
+      throw new UnsupportedOperationException();
+    }
   }
 
 }
