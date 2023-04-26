@@ -2,7 +2,7 @@ package algorithms.sorting;
 
 public class SelectionSort {
 
-  public static void sort(Comparable[] arr) {
+  public static int[] sort(int[] arr) {
     int N = arr.length;
     for (int i = 0; i < N; i++) {
       int min = i;
@@ -13,14 +13,16 @@ public class SelectionSort {
       }
       exchange(arr, i, min);
     }
+
+    return arr;
   }
 
-  private static boolean less(Comparable v, Comparable w) {
-    return v.compareTo(w) < 0;
+  private static boolean less(int v, int w) {
+    return v < w;
   }
 
-  private static void exchange(Comparable[] arr, int i, int j) {
-    Comparable swap = arr[i];
+  private static void exchange(int[] arr, int i, int j) {
+    int swap = arr[i];
     arr[i] = arr[j];
     arr[j] = swap;
   }
